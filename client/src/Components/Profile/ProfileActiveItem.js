@@ -71,6 +71,8 @@ export default function ItemCard(props) {
   const [currentUser] = currentUserState;
   const { apiUrlState } = useContext(ItemsContext);
   const [apiUrl, setApiUrl] = apiUrlState;
+  const { watchedItemsState } = useContext(ItemsContext);
+  const [watchedItems, setWatchedItems] = watchedItemsState;
 
   // item modal
   const [openCard, setCardOpen] = useState(false);
@@ -110,6 +112,33 @@ export default function ItemCard(props) {
       }
     }
   }, [props.activeItem]);
+
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'June',
+    'Jul',
+    'Aug',
+    'Sept',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+
+  const convertTimestamp = (timestamp) => {
+    const MDY = timestamp.slice(0, 10);
+    const dateArr = MDY.toString().split('-');
+
+    const year = dateArr[0];
+    const month = months[dateArr[1] - 1];
+    const day = dateArr[2];
+
+    const date = `${month} ${day}, ${year}`;
+    return date;
+  };
 
   return (
     <div className={classes.root}>
@@ -193,11 +222,12 @@ export default function ItemCard(props) {
             avatar={
               <Avatar
                 sx={{ bgcolor: red[500], marginLeft: '8px' }}
-                aria-label="user_name"
+                src={props.activeItem.itemOwnerPhoto}
+                aria-label="user_avatar"
               />
             }
             title={itemOwner}
-            subheader="6 hours ago"
+            subheader={convertTimestamp(props.activeItem.createdAt)}
             style={{
               marginBottom: '-20px',
               marginTop: '-12px',

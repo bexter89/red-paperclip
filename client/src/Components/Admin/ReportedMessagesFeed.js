@@ -11,19 +11,19 @@ import ReportedMessage from './ReportedMessage';
 const reportedMessages = [
   {
     id: 1,
-    user: 'Jeffrey Dahmer',
-    message: 'A sandwich is a sandwich, but a Manwich is a meal.',
+    user: 'Jerry Smith',
+    message: `I’m Mr. Crowbar, and this is my friend, who is also a crowbar.`,
   },
   {
     id: 2,
-    user: 'Hanibal Lector',
-    message:
-      "When The Fox Hears The Rabbit Scream, He Comes A-Runnin', But Not To Help.",
+    user: 'Rick Sanchez',
+    message: `It's like the N word and the C word had a baby and it was raised by all the bad words for Jews`,
   },
   {
     id: 3,
-    user: 'William Cody',
-    message: "It puts the lotion on it's skin",
+    user: 'Beth Smith',
+    message:
+      'Okay, let’s go see this latest piece of Marvel s*** you kids are jizzing over.',
   },
 ];
 

@@ -49,6 +49,14 @@ const ReportedMessage = ({ user, message }) => {
     console.log('Clicked Ban User');
   };
 
+  const timesArr = [
+    '3 hours ago',
+    '2 days ago',
+    '16 hours ago',
+    '1 day ago',
+    '35 minutes ago',
+  ];
+
   return (
     <div>
       <Card
@@ -69,7 +77,7 @@ const ReportedMessage = ({ user, message }) => {
                 />
               }
               title={user}
-              subheader="6 hours ago"
+              subheader={timesArr[Math.floor(Math.random() * timesArr.length)]}
               style={{
                 color: '#FFF',
               }}

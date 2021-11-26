@@ -182,6 +182,33 @@ export default function ItemCard({ item }) {
   const [trade, setTrade] = useState(false);
   const handleTrade = () => setTrade(true);
 
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'June',
+    'Jul',
+    'Aug',
+    'Sept',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+
+  const convertTimestamp = (timestamp) => {
+    const MDY = timestamp.slice(0, 10);
+    const dateArr = MDY.toString().split('-');
+
+    const year = dateArr[0];
+    const month = months[dateArr[1] - 1];
+    const day = dateArr[2];
+
+    const date = `${month} ${day}, ${year}`;
+    return date;
+  };
+
   return (
     <div className={classes.root}>
       <Modal open={openCard} onClose={handleCardClose}>
@@ -327,7 +354,7 @@ export default function ItemCard({ item }) {
                 />
               }
               title={item.itemOwner}
-              subheader={dateFormat(item.createdAt.date, 'mmmm dS, yyyy')}
+              subheader={convertTimestamp(item.createdAt)}
               style={{
                 marginBottom: '-20px',
                 marginTop: '-12px',
@@ -344,7 +371,7 @@ export default function ItemCard({ item }) {
                 />
               }
               title={item.itemOwner}
-              subheader={dateFormat(item.createdAt.date, 'mmmm dS, yyyy')}
+              subheader={convertTimestamp(item.createdAt)}
               style={{
                 marginBottom: '-20px',
                 marginTop: '-12px',

@@ -65,7 +65,7 @@ const getLocation = (zip) => {
     state: dataObj.state,
   };
 
-  result = location.city + ', ' + location.state;
+  result = `${location.city}, ${location.state}`;
   return result;
 };
 export default function TradeDetails({

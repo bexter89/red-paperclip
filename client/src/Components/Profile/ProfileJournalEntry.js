@@ -63,6 +63,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function ProfileJournalEntry(props) {
+  console.log('**** props', props);
   const classes = useStyles();
   // mouse over image
 
@@ -153,19 +154,11 @@ export default function ProfileJournalEntry(props) {
             </Grid>
           </Grid>
           <CardHeader
-            avatar={
-              <Avatar
-                sx={{ bgcolor: red[500], marginLeft: '8px' }}
-                aria-label="user_name"
-                src={item.itemOwnerPhoto}
-              />
-            }
-            title={itemOwner}
-            subheader="6 hours ago"
+            subheader={`Previous Owner: ${itemOwner}`}
             style={{
               marginBottom: '-20px',
               marginTop: '-12px',
-              color: '#FFFFFF',
+              color: '#FFF',
             }}
           />
           <CardContent>

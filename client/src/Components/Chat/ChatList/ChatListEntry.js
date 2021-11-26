@@ -32,8 +32,44 @@ export default function ChatListEntry({ entryObj, clicked }) {
     <time dateTime={new Date(time).toISOString()}>{timeago(time)}</time>
   );
 
-  const epochTimeStamp = Date.now() - 60000 * 22;
-  <TimeAgo time={epochTimeStamp} />;
+  const epochTimeStamp1 = Date.now() - 60000 * 22;
+  <TimeAgo time={epochTimeStamp1} />;
+
+  const epochTimeStamp2 = Date.now() - 60000 * 48;
+  <TimeAgo time={epochTimeStamp2} />;
+
+  const epochTimeStamp3 = Date.now() - 60000 * 71;
+  <TimeAgo time={epochTimeStamp3} />;
+
+  const epochTimeStamp4 = Date.now() - 60000 * 12;
+  <TimeAgo time={epochTimeStamp3} />;
+
+  const epochTimeStamp5 = Date.now() - 60000 * 139;
+  <TimeAgo time={epochTimeStamp3} />;
+
+  const epochTimeStamp6 = Date.now() - 60000 * 71;
+  <TimeAgo time={epochTimeStamp3} />;
+
+  const epochTimeStamp7 = Date.now() - 60000 * 8;
+  <TimeAgo time={epochTimeStamp3} />;
+
+  const epochTimeStamp8 = Date.now() - 60000 * 283;
+  <TimeAgo time={epochTimeStamp3} />;
+
+  const epochTimeStamp9 = Date.now() - 60000 * 618;
+  <TimeAgo time={epochTimeStamp3} />;
+
+  const useRandomTime = [
+    epochTimeStamp1,
+    epochTimeStamp2,
+    epochTimeStamp3,
+    epochTimeStamp4,
+    epochTimeStamp5,
+    epochTimeStamp6,
+    epochTimeStamp7,
+    epochTimeStamp8,
+    epochTimeStamp9,
+  ];
 
   return (
     <>
@@ -47,7 +83,14 @@ export default function ChatListEntry({ entryObj, clicked }) {
               <p>{shortStr}</p>
             </div>
             <p className="chat_timestamp">
-              <TimeAgo time={epochTimeStamp} className="timestamp" />
+              <TimeAgo
+                time={
+                  useRandomTime[
+                    Math.floor(Math.random() * useRandomTime.length)
+                  ]
+                }
+                className="timestamp"
+              />
             </p>
           </div>
           <Divider />
@@ -61,7 +104,12 @@ export default function ChatListEntry({ entryObj, clicked }) {
             <div className="chat_details">
               <p>{shortStr}</p>
             </div>
-            <TimeAgo time={epochTimeStamp} className="timestamp" />
+            <TimeAgo
+              time={
+                useRandomTime[Math.floor(Math.random() * useRandomTime.length)]
+              }
+              className="timestamp"
+            />
           </div>
           <Divider />
         </>
