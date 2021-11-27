@@ -67,65 +67,67 @@ const MenuBar = () => {
   };
 
   return (
-    <AppBar
-      position="fixed"
-      className="header"
-      style={{ backgroundColor: '#161513', color: 'white' }}
-    >
-      <Toolbar>
-        <Container maxWidth="lg">
-          <Grid container wrap="nowrap">
-            <Grid container item wrap="nowrap" alignItems="center">
-              <AttachFileIcon
-                color="paperClip"
-                onClick={handleLogoClick}
-                style={{ cursor: 'pointer', transform: 'rotate(45deg)' }}
-                sx={{ fontSize: 40 }}
-              />
-              <Typography
-                variant="h5"
-                onClick={handleLogoClick}
-                style={{ cursor: 'pointer' }}
-              >
-                Red Paperclip
-              </Typography>
-              &nbsp;
-              <Typography
-                variant="h5"
-                onClick={handleCompareArrowsClick}
-                style={{ cursor: 'pointer' }}
-              >
-                <CompareArrowsIcon />
-              </Typography>
-              &nbsp;
-              <Typography variant="h5">{randomItemText}</Typography>
-            </Grid>
-            <Grid container justifyContent="flex-end">
-              {isLoggedIn && (
-                <Grid item sx={{ pr: 2 }}>
-                  <Avatar
-                    src={currentUser.imageUrl}
-                    onClick={handleSendToProfile}
-                    style={{ cursor: 'pointer' }}
+    <nav>
+      <AppBar
+        position="fixed"
+        className="header"
+        style={{ backgroundColor: '#161513', color: 'white' }}
+      >
+        <Toolbar>
+          <Container maxWidth="lg">
+            <Grid container wrap="nowrap">
+              <Grid container item wrap="nowrap" alignItems="center">
+                <AttachFileIcon
+                  color="paperClip"
+                  onClick={handleLogoClick}
+                  style={{ cursor: 'pointer', transform: 'rotate(45deg)' }}
+                  sx={{ fontSize: 40 }}
+                />
+                <Typography
+                  variant="h5"
+                  onClick={handleLogoClick}
+                  style={{ cursor: 'pointer' }}
+                >
+                  Red Paperclip
+                </Typography>
+                &nbsp;
+                <Typography
+                  variant="h5"
+                  onClick={handleCompareArrowsClick}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <CompareArrowsIcon />
+                </Typography>
+                &nbsp;
+                <Typography variant="h5">{randomItemText}</Typography>
+              </Grid>
+              <Grid container justifyContent="flex-end">
+                {isLoggedIn && (
+                  <Grid item sx={{ pr: 2 }}>
+                    <Avatar
+                      src={currentUser.imageUrl}
+                      onClick={handleSendToProfile}
+                      style={{ cursor: 'pointer' }}
+                    />
+                  </Grid>
+                )}
+                <Grid item>
+                  <Hamburger
+                    onClick={handleModalOpen}
+                    menuOpen={menuOpen}
+                    setMenuOpen={setMenuOpen}
+                    isLoggedIn={isLoggedIn}
+                    setIsLoggedIn={setIsLoggedIn}
+                    setAnchorEl={setAnchorEl}
+                    anchorEl={anchorEl}
                   />
                 </Grid>
-              )}
-              <Grid item>
-                <Hamburger
-                  onClick={handleModalOpen}
-                  menuOpen={menuOpen}
-                  setMenuOpen={setMenuOpen}
-                  isLoggedIn={isLoggedIn}
-                  setIsLoggedIn={setIsLoggedIn}
-                  setAnchorEl={setAnchorEl}
-                  anchorEl={anchorEl}
-                />
               </Grid>
             </Grid>
-          </Grid>
-        </Container>
-      </Toolbar>
-    </AppBar>
+          </Container>
+        </Toolbar>
+      </AppBar>
+    </nav>
   );
 };
 
