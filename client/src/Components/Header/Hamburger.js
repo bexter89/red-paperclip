@@ -83,11 +83,6 @@ const Hamburger = () => {
     setMenuOpen(true);
   };
 
-  // const handleMenuOpen = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  //   setMenuOpen(true);
-  // };
-
   // React Router Navigation
   const history = useHistory();
 
