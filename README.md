@@ -13,6 +13,7 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
+    <li><a href="#application-demo">Application Demo</a></li>
     <li><a href="#contributors">Contributors</a>
       <ul>
         <li><a href="#rebekah-cruz">Rebekah Cruz</a></li>
@@ -37,7 +38,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#application-demo">Application Demo</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
