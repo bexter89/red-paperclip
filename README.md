@@ -37,7 +37,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#module-break-down">Module Break Down</a></li>
+    <li><a href="#application-demo">Application Demo</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
