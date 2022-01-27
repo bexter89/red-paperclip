@@ -171,7 +171,7 @@ UI Owner/Software Engineer
 [![github-shield]][blake-github]
 
 ### Travis Morse
-UI Owner/Software Engineer
+Software Engineer
 
 <img src="ReadmeImages/TravisMorse.jpg" alt="Travis Morse Headshot" width="100">
 
@@ -191,7 +191,7 @@ Architecture Owner/Software Engineer
 
 ## Pingping Xiao
 
-Architecture Owner/Software Engineer
+Software Engineer
 
  <img src="ReadmeImages/PingpingXiao.jpg" alt="Pingping Xiao Headshot" width="100">
  
