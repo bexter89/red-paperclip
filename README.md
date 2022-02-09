@@ -170,7 +170,7 @@ UI Owner/Software Engineer
 [![linkedin-shield]][blake-linkedin]
 [![github-shield]][blake-github]
 
-### Travis Morse
+## Travis Morse
 
 Software Engineer
 
