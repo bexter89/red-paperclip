@@ -171,6 +171,7 @@ UI Owner/Software Engineer
 [![github-shield]][blake-github]
 
 ### Travis Morse
+
 Software Engineer
 
 <img src="ReadmeImages/TravisMorse.jpg" alt="Travis Morse Headshot" width="100">
